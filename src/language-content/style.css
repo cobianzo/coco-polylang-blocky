@@ -1,0 +1,7 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor. It differs from editor.scss that only gets applied in the editor.
+ */
+.wp-block-coco-polylang-blocky-polylang-language-content {
+	display: contents;;
+}

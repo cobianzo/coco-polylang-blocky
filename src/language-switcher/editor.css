@@ -1,0 +1,35 @@
+/**
+ * Language Switcher Block Editor Styles
+ * Applied only in the editor
+ */
+
+/* Editor-specific styles */
+.wp-block-coco-polylang-blocky-language-switcher {
+  border: 1px dashed #ccc;
+  padding: 10px;
+}
+
+.language-switcher-editor-panel .components-panel__row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.language-switcher-editor-panel .components-base-control__label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Preview styles in editor */
+.language-switcher-preview {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.language-switcher-preview h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}

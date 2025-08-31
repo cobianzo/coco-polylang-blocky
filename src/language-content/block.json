@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "coco-polylang-blocky/polylang-language-content",
+  "version": "1.0.1",
+  "title": "Polylang Language Content",
+  "category": "text",
+  "icon": "translation",
+  "description": "Allows you to create specific content for each language configured in Polylang.",
+  "keywords": ["polylang", "language", "multilingual"],
+  "attributes": {
+    "languages": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "coco-polylang-blocky",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "render": "file:./render.php"
+}

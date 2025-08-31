@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "coco-polylang-blocky/language-switcher",
+  "version": "1.0.1",
+  "title": "Polylang Language Switcher",
+  "category": "widgets",
+  "icon": "translation",
+  "description": "Displays a language switcher for Polylang with customizable layout options.",
+  "keywords": ["polylang", "language", "switcher", "multilingual"],
+  "attributes": {
+		"layout": {
+			"type": "string",
+			"default": "list",
+			"enum": ["list", "dropdown"]
+		},
+		"hide_current": {
+			"type": "boolean",
+			"default": false
+		},
+		"show_flags": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+  "supports": {
+    "html": false,
+    "align": true,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "coco-polylang-blocky",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "render": "file:./render.php"
+}

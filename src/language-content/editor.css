@@ -1,0 +1,41 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor. It differs from editor.scss that only gets applied in the editor.
+ */
+.wp-block-coco-polylang-blocky-polylang-language-content {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+.polylang-content-block-editor .polylang-language-tabs {
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
+}
+
+.polylang-content-block-editor .polylang-language-tabs .components-tab-panel__tabs {
+	border-bottom: none;
+}
+
+.polylang-content-block-editor .polylang-language-tabs .components-button {
+	padding: 10px 15px;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	color: #555;
+	font-weight: 600;
+}
+
+.polylang-content-block-editor .polylang-language-tabs .components-button.active-tab {
+	background-color: #f0f0f0;
+	color: #007cba;
+	border-bottom: 2px solid #007cba;
+}
+
+.polylang-content-block-editor .language-tab-content h4 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	color: #333;
+}
