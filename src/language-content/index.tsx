@@ -77,7 +77,7 @@ const PolylangLanguageContentEdit = ({ attributes, setAttributes, clientId }: Ed
     };
   }, [clientId]);
 
-  const { replaceInnerBlocks } = useDispatch('core/block-editor');
+  const { replaceInnerBlocks, updateBlockAttributes } = useDispatch('core/block-editor');
 
   useEffect(() => {
     getPolylangLanguages().then((langs) => {
@@ -105,11 +105,23 @@ const PolylangLanguageContentEdit = ({ attributes, setAttributes, clientId }: Ed
             );
 
             if (existingBlock) {
+              // Update existing block metadata if it doesn't have the correct name
+              if (!existingBlock.attributes?.metadata?.name || existingBlock.attributes.metadata.name !== lang.slug) {
+                updateBlockAttributes(existingBlock.clientId, {
+                  metadata: {
+                    ...existingBlock.attributes?.metadata,
+                    name: lang.slug
+                  }
+                });
+              }
               allLanguageBlocks.push(existingBlock);
             } else {
               const newBlock = createBlock('core/group', {
                 className: `language-content-${lang.slug}`,
                 layout: { type: 'constrained' },
+                metadata: {
+                  name: lang.slug
+                }
               }, [
                 createBlock('core/paragraph', {
                   placeholder: `Content in ${lang.name}...`,
